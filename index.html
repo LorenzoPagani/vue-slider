@@ -10,17 +10,21 @@
 <body>
     <div id="app">
         <div class="thumbnails">
-            <img class="thumb-pic" :class="{ 'thumb-active': (i == counter) }" v-for="(photo, i) in slides" :src="photo.immagine" alt="">
+            <img :id="i" @click="selectImg(i)" class="thumb-pic" :class="{ 'thumb-active': (i == counter) }" v-for="(photo, i) in slides" :src="photo.immagine" alt="">
         </div>
         <div class="card">
-            <img class="pic" :src="slides[counter].immagine" alt="">
+            <div class="pic-wrapper">
+                <img class="pic" :src="slides[counter].immagine" alt="">
+            </div>
             <h2>{{slides[counter].titolo}}</h2>
             <p>{{slides[counter].testo}}</p>
             <div class="number">{{counter+1}}</div>
         </div>
         <div class="controls">
-            <button @click="back()">indietro</button>
-            <button @click="next()">Avanti</button>
+            <button @click="back">indietro</button>
+            <button @click="next">Avanti</button>
+            <button @click="startAutoSlide">Autoplay</button>
+            <button @click="stopAutoSlide">Stop</button>
         </div>
     </div>
         <script src="main.js"></script>

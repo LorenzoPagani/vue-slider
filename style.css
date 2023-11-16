@@ -1,8 +1,10 @@
     * {
-
+        font-family: sans-serif;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        background-color: #222;
+        color: white;
     }  
 
 
@@ -10,18 +12,20 @@
 .controls {
     width: 300px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card {
     width: 300px;
-    position: relative;
-    margin: 50px auto;
+    margin: 50px auto 10px auto;
 
 }
 .thumbnails{
     display: flex;
     justify-content: center;
     gap: 5px;
+    margin-top: 10px;
 }
 
 .thumb-pic {
@@ -37,6 +41,10 @@
     border: 1px solid lime;
 }
 
+
+.pic-wrapper {
+    position: relative;
+}
 .pic {
     width: 100%;
     aspect-ratio: 1;
@@ -45,12 +53,12 @@
 
 .number {
     position: absolute;
-    left: 84%;
-    top: 63%;
+    left: 62%;
+    top: 69%;
     background-color: teal;
     width: 20px;
     height: 20px;
     text-align: center;
     border-radius: 50%;
-    padding: 5px;
+    
 }
