@@ -1,19 +1,52 @@
-.card,
+    * {
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }  
+
+
+
 .controls {
     width: 300px;
-    margin: 50px auto;
+    margin: auto;
 }
+
+.card {
+    width: 300px;
+    position: relative;
+    margin: 50px auto;
+
+}
+.thumbnails{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.thumb-pic {
+    width: 100px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    filter: brightness(30%);
+    cursor: pointer;
+}
+
+.thumb-active {
+    filter: brightness(100%);
+    border: 1px solid lime;
+}
+
 .pic {
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
-    position: relative;
 }
 
 .number {
     position: absolute;
-    left: 61%;
-    top: 77%;
+    left: 84%;
+    top: 63%;
     background-color: teal;
     width: 20px;
     height: 20px;
